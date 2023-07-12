@@ -1,0 +1,8 @@
+name: PS3
+
+ofpath: ../../..
+
+addons:
+- ofxKinect
+# platforms: ["osx", "msys2", "vs"]
+# templates: ["vscode"]
