@@ -62,9 +62,6 @@ public:
 
 	// Controls
 
-	void setTest(uint8_t addr, uint8_t val) {
-		sccb_reg_write(addr, val);
-	}
 	bool getAutogain() const { return autogain; }
 	void setAutogain(bool val) {
 	    autogain = val;
@@ -75,8 +72,8 @@ public:
 			sccb_reg_write(0x13, 0xf0); //AGC,AEC,AWB OFF
 			sccb_reg_write(0x64, sccb_reg_read(0x64)&0xFC);
 
-//			setGain(gain);
-//			setExposure(exposure);
+			setGain(gain);
+			setExposure(exposure);
 	    }
 	}
 	bool getAutoWhiteBalance() const { return awb; }
@@ -90,7 +87,6 @@ public:
 	}
 	uint8_t getGain() const { return gain; }
 	void setGain(uint8_t val) {
-		setAutogain(false);
 	    gain = val;
 	    switch(val & 0x30){
 		case 0x00:
@@ -109,70 +105,35 @@ public:
 		    val |=0xF0;
 		    break;
 	    }
-		
 	    sccb_reg_write(0x00, val);
+	}
+	uint8_t getExposure() const { return exposure; }
+	void setExposure(uint8_t val) {
+	    exposure = val;
+	    sccb_reg_write(0x08, val>>7);
+    	sccb_reg_write(0x10, val<<1);
+	}
+	uint8_t getSharpness() const { return sharpness; }
+	void setSharpness(uint8_t val) {
+	    sharpness = val;
+	    sccb_reg_write(0x91, val); //vga noise
+    	sccb_reg_write(0x8E, val); //qvga noise
+	}
+	uint8_t getContrast() const { return contrast; }
+	void setContrast(uint8_t val) {
+	    contrast = val;
+	    sccb_reg_write(0x9C, val);
+	}
+	uint8_t getBrightness() const { return brightness; }
+	void setBrightness(uint8_t val) {
+	    brightness = val;
+	    sccb_reg_write(0x9B, val);
 	}
 	uint8_t getHue() const { return hue; }
 	void setHue(uint8_t val) {
 		hue = val;
 		sccb_reg_write(0x01, val);
 	}
-	
-	
-	uint8_t getExposure() const { return exposure; }
-	void setExposure(uint8_t val) {
-		
-		// tentando desligar o primeiro bit... vejamos.
-		sccb_reg_write(0x13, sccb_reg_read(0x13) & 0b11111110 ); //AEC
-
-	    exposure = val;
-	    sccb_reg_write(0x08, val>>7);
-    	sccb_reg_write(0x10, val<<1);
-	}
-//	void setExposure(uint16_t val) {
-//		exposure = val;
-//		sccb_reg_write(0x08, val >> 8);
-//		sccb_reg_write(0x10, val & 0xff);
-//	}
-	uint8_t getSharpness() const { return sharpness; }
-	void setSharpness(uint8_t val) {
-	    sharpness = val;
-	    sccb_reg_write(0x8F, val); //vga noise
-    	sccb_reg_write(0x90, val); //qvga noise
-//		sccb_reg_write(0x91, val); //vga noise
-//		sccb_reg_write(0x8E, val); //qvga noise
-	}
-	uint8_t getContrast() const { return contrast; }
-//	void setContrast(uint8_t val) {
-	void setContrast(uint8_t val) {
-		
-		
-//		sccb_reg_write(0xA6, sccb_reg_read(0xA6)&0x4);
-//		sccb_reg_write(0xA6, 0x4);
-
-	    contrast = val;
-		sccb_reg_write(0x9C, val);
-//		sccb_reg_write(0x9D, val);
-		
-//		sccb_reg_write(0xAB, 1);
-//		sccb_reg_write(0x9D, val);
-//		sccb_reg_write(0x9E, 0);
-//		sccb_reg_write(0x9F, 0);
-
-//	    sccb_reg_write(0x41, val << 5);
-//		sccb_reg_write(0x42, val<<1);
-//		sccb_reg_write(0x56, val << 4);
-
-	}
-	uint8_t getBrightness() const { return brightness; }
-	void setBrightness(uint8_t val) {
-	    brightness = val;
-	    sccb_reg_write(0x9B, val);
-//		sccb_reg_write(0x04, val << 4);
-//		sccb_reg_write(0x55, val);
-//		sccb_reg_write(0x8f, val);
-	}
-
 	uint8_t getRedBalance() const { return redblc; }
 	void setRedBalance(uint8_t val) {
 		redblc = val;
@@ -225,8 +186,6 @@ public:
 	//
 	static const std::vector<PS3EYERef>& getDevices( bool forceRefresh = false );
 
-	void ov534_reg_write(uint16_t reg, uint8_t val);
-	void sccb_reg_write(uint8_t reg, uint8_t val);
 private:
 	PS3EYECam(const PS3EYECam&);
     void operator=(const PS3EYECam&);
@@ -236,10 +195,10 @@ private:
 	// usb ops
 	uint16_t ov534_set_frame_rate(uint16_t frame_rate, bool dry_run = false);
 	void ov534_set_led(int status);
-//	void ov534_reg_write(uint16_t reg, uint8_t val);
+	void ov534_reg_write(uint16_t reg, uint8_t val);
 	uint8_t ov534_reg_read(uint16_t reg);
 	int sccb_check_status();
-//	void sccb_reg_write(uint8_t reg, uint8_t val);
+	void sccb_reg_write(uint8_t reg, uint8_t val);
 	uint8_t sccb_reg_read(uint16_t reg);
 	void reg_w_array(const uint8_t (*data)[2], int len);
 	void sccb_w_array(const uint8_t (*data)[2], int len);

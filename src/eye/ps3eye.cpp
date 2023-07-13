@@ -95,10 +95,10 @@ static const uint8_t ov534_reg_initdata[][2] = {
 
 	{ OV534_REG_ADDRESS, 0x42 }, /* select OV772x sensor */
 
-	{ 0x92, 0x01 }, //sharpness upper limit
-	{ 0x93, 0x18 }, // sharpness lower limit
-	{ 0x94, 0x10 }, // matrix coefficient
-	{ 0x95, 0x10 }, // matrix coefficient
+	{ 0x92, 0x01 },
+	{ 0x93, 0x18 },
+	{ 0x94, 0x10 },
+	{ 0x95, 0x10 },
 	{ 0xE2, 0x00 },
 	{ 0xE7, 0x3E },
 	
@@ -152,22 +152,20 @@ static const uint8_t ov534_reg_initdata[][2] = {
 static const uint8_t ov772x_reg_initdata[][2] = {
 
 	{ 0x12, 0x80 },		/* reset */
-	{ 0x3D, 0x00 },	// com 12 -
+	{ 0x3D, 0x00 },
 
 	{ 0x12, 0x01 },		/* Processed Bayer RAW (8bit) */
 
-	{ 0x11, 0x02 }, // internal clock multiplier = 1
-	{ 0x11, 0x08 }, // internal clock multiplier = 1
-	{ 0x14, 0x40 },	// com 9 - default ja eh 0x40 -
-	{ 0x15, 0x00 }, // com 10 - padrao 00 tb
-	{ 0x63, 0xAA },		// AWB	0b1000000
-//	{ 0x63, 0b1000000 },		// AWB	0b1000000
-	{ 0x64, 0x87 }, //DSP_Ctrl1 (varios controles binarios)
-	{ 0x66, 0x00 }, //DSP_Ctrl3
-	{ 0x67, 0x02 }, //DSP_Ctrl4 -
-	{ 0x17, 0x26 }, // Horizontal Start = 26 = VGA, 3F = QVGA
-	{ 0x18, 0xA0 }, // Hsize = A0 VGA 50 = QVGA
-	{ 0x19, 0x07 },// VSTRT
+	{ 0x11, 0x01 },
+	{ 0x14, 0x40 },
+	{ 0x15, 0x00 },
+	{ 0x63, 0xAA },		// AWB	
+	{ 0x64, 0x87 },
+	{ 0x66, 0x00 },
+	{ 0x67, 0x02 },
+	{ 0x17, 0x26 },
+	{ 0x18, 0xA0 },
+	{ 0x19, 0x07 },
 	{ 0x1A, 0xF0 },
 	{ 0x29, 0xA0 },
 	{ 0x2A, 0x00 },
@@ -206,7 +204,7 @@ static const uint8_t bridge_start_vga[][2] = {
 	{0xc1, 0x3c},
 };
 static const uint8_t sensor_start_vga[][2] = {
-	{0x12, 0x01},  // COM7 - Bit 6 resolution selection (0 VGA / 1 QVGA)
+	{0x12, 0x01},
 	{0x17, 0x26},
 	{0x18, 0xa0},
 	{0x19, 0x07},
@@ -227,7 +225,7 @@ static const uint8_t bridge_start_qvga[][2] = {
 	{0xc1, 0x1e},
 };
 static const uint8_t sensor_start_qvga[][2] = {
-	{0x12, 0x41}, // COM7 - Bit 6 resolution selection (0 VGA / 1 QVGA)
+	{0x12, 0x41},
 	{0x17, 0x3f},
 	{0x18, 0x50},
 	{0x19, 0x03},
@@ -332,12 +330,7 @@ USBMgr::USBMgr()
 	exit_signaled = false;
 	active_camera_count = 0;
     libusb_init(&usb_context);
-//    libusb_set_debug(usb_context, 1);
-	libusb_set_option(
-		usb_context,
-		LIBUSB_OPTION_LOG_LEVEL,
-		LIBUSB_LOG_LEVEL_INFO
-		); // : LIBUSB_LOG_LEVEL_WARNING : 0
+    libusb_set_debug(usb_context, 1);
 }
 
 USBMgr::~USBMgr()
@@ -1086,11 +1079,6 @@ bool PS3EYECam::init(uint32_t width, uint32_t height, uint16_t desiredFrameRate,
     nanosleep((const struct timespec[]){{0, 100000000}}, NULL);
 #endif
 
-	
-	ov534_reg_write(OV534_REG_ADDRESS, 0x60);
-	ov534_reg_write(OV534_REG_ADDRESS, 0x60);
-	ov534_reg_write(OV534_REG_ADDRESS, 0x60);
-
 	/* initialize the sensor address */
 	ov534_reg_write(OV534_REG_ADDRESS, 0x42);
 
@@ -1300,10 +1288,6 @@ uint16_t PS3EYECam::ov534_set_frame_rate(uint16_t frame_rate, bool dry_run)
              uint8_t re5;
      };
      const struct rate_s *r;
-	
-	//r11 = CLKRC bit 5:0 internal clock pre-scalar = pll multiplier dividido por este.stop()
-	// penultimo = pll freq control , bits 7 e 6. 0xc1 - 8x, 81 = 6x, 41 = 4x, 01 = bypass pll
-	// Re5 = camera_clk select
      static const struct rate_s rate_0[] = { /* 640x480 */
              {83, 0x01, 0xc1, 0x02}, /* 83 FPS: video is partly corrupt */
              {75, 0x01, 0x81, 0x02}, /* 75 FPS or below: video is valid */
@@ -1321,8 +1305,7 @@ uint16_t PS3EYECam::ov534_set_frame_rate(uint16_t frame_rate, bool dry_run)
              {2, 0x09, 0x01, 0x02},
      };
      static const struct rate_s rate_1[] = { /* 320x240 */
-			{300, 0x00, 0xc1, 0x04}, // aqui roda a 300 na verdade.
-             {290, 0x00, 0xc1, 0x04}, // aqui roda a 300 na verdade.
+             {290, 0x00, 0xc1, 0x04},
              {205, 0x01, 0xc1, 0x02}, /* 205 FPS or above: video is partly corrupt */
              {187, 0x01, 0x81, 0x02}, /* 187 FPS or below: video is valid */
              {150, 0x00, 0x41, 0x04},
