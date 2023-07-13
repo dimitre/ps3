@@ -13,9 +13,11 @@ void ofApp::setup(){
 	if(devices.size()) {
 		for (const auto & device : devices) {
 			eye = device;
+
 			bool ok = eye->init(camDimensions.x, camDimensions.y, FPS, PS3EYECam::EOutputFormat::RGB);
 			if (ok) {
-				videoTexture.allocate(camDimensions.x, camDimensions.y, GL_RGB);
+				videoTexture.allocate(camDimensions.x, camDimensions.y, GL_BGR_EXT);
+//				videoFrame = new unsigned char[eye->getWidth()*eye->getHeight()*3];
 				eye->start();
 			} else {
 			}
@@ -25,7 +27,9 @@ void ofApp::setup(){
 
 void ofApp::update(){
 	if (eye) {
-		eye->getFrame(pixels.getData());
+		eye->getFrame(videoFrame);
+		videoTexture.loadData(videoFrame, eye->getWidth(),eye->getHeight(), GL_BGR_EXT);
+//		eye->getFrame(pixels.getData());
 	}
 }
 
