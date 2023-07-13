@@ -3,7 +3,7 @@
 #include "ps3eye.h"
 
 // #define FPS 83
-#define FPS 75
+#define FPS 60
 #define VGA
 
 #ifdef VGA
