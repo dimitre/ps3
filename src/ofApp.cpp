@@ -9,7 +9,7 @@ void ofApp::setup(){
 	unsigned char * videoFrame [CAMW * CAMH * 3];
 	const auto & devices( PS3EYECam::getDevices() );
 	
-//	cout << "devices size:  " << devices.size() << endl;
+	cout << "devices size:  " << devices.size() << endl;
 	if(devices.size()) {
 		for (const auto & device : devices) {
 			eye = device;
