@@ -27,7 +27,6 @@ public:
 	
 	ofPixels pixels;
 	ofTexture videoTexture;
-	ps3eye::PS3EYECam::PS3EYERef eye;
 	
 //	unsigned char * videoFrame;
 	unsigned char videoFrame [ CAMW * CAMH * 3];

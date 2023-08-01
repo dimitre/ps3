@@ -1,6 +1,7 @@
 #include "ofApp.h"
 
 using namespace ps3eye;
+	ps3eye::PS3EYECam::PS3EYERef eye;
 
 void ofApp::setup(){
 	ofSetFrameRate(0);
@@ -10,29 +11,29 @@ void ofApp::setup(){
 	const auto & devices( PS3EYECam::getDevices() );
 	
 	cout << "devices size:  " << devices.size() << endl;
-	if(devices.size()) {
+	// if(devices.size()) {
 		
-		for (const auto & device : devices) {
-			eye = device;
-			bool ok = eye->init(camDimensions.x, camDimensions.y, FPS, PS3EYECam::EOutputFormat::RGB);
-			if (ok) {
-				videoTexture.allocate(camDimensions.x, camDimensions.y, GL_RGB);
-				eye->start();
-			} else {
-			}
-		}
-	}
+	// 	for (const auto & device : devices) {
+	// 		eye = device;
+	// 		bool ok = eye->init(camDimensions.x, camDimensions.y, FPS, PS3EYECam::EOutputFormat::RGB);
+	// 		if (ok) {
+	// 			videoTexture.allocate(camDimensions.x, camDimensions.y, GL_RGB);
+	// 			eye->start();
+	// 		} else {
+	// 		}
+	// 	}
+	// }
 }
 
 void ofApp::update(){
-	if (eye) {
-		eye->getFrame(pixels.getData());
-	}
+	// if (eye) {
+	// 	eye->getFrame(pixels.getData());
+	// }
 }
 
 void ofApp::draw(){
-	videoTexture.loadData(pixels);
-	videoTexture.draw(0,0,eye->getWidth(),eye->getHeight());
+	// videoTexture.loadData(pixels);
+	// videoTexture.draw(0,0,eye->getWidth(),eye->getHeight());
 }
 
 void ofApp::keyPressed(int key) {
