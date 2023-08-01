@@ -1,0 +1,725 @@
+{
+	"archiveVersion": "1",
+	"classes": {},
+	"objectVersion": "54",
+	"objects": {
+		"01E14E3E-0558-4F39-B755-385A44B567B8": {
+			"fileRef": "33BEFE65-19C3-49BE-BC43-2033F194463C",
+			"isa": "PBXBuildFile"
+		},
+		"145B9B43-8C98-48B8-B8EE-F2F7B2499707": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "flags.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/flags.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"191CD6FA2847E21E0085CBB6": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.plist.entitlements",
+			"path": "of.entitlements",
+			"sourceTree": "<group>"
+		},
+		"191EF70929D778A400F35F26": {
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "folder",
+			"name": "openFrameworks",
+			"path": "../../../libs/openFrameworks",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"19B789C429E5AB4A0082E9B8": {
+			"buildActionMask": "2147483647",
+			"files": [],
+			"inputFileListPaths": [],
+			"inputPaths": [],
+			"isa": "PBXShellScriptBuildPhase",
+			"outputFileListPaths": [],
+			"outputPaths": [],
+			"runOnlyForDeploymentPostprocessing": "0",
+			"shellPath": "/bin/sh",
+			"shellScript": "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n",
+			"showEnvVarsInLog": "0"
+		},
+		"1BC5FBBF-50CF-4C47-A998-C494C5E92AB6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "libfreenect_registration.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/include/libfreenect_registration.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"236DDD5B-6540-4309-AC8C-6E6394186AF0": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "registration.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/registration.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"27530F81-5C25-45A9-8B23-653160892D1B": {
+			"children": [
+				"60BD0B6F-D262-4EA8-8BAC-C63518BD26EF",
+				"B6B98970-7AF2-4678-8104-EC60E15A848A",
+				"1BC5FBBF-50CF-4C47-A998-C494C5E92AB6"
+			],
+			"isa": "PBXGroup",
+			"name": "include",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/include",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"2A8C2FC8-90B8-4D44-8B8F-847B759378CA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "eyecam.h",
+			"path": "src/eyecam.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"31AF9952-C9DF-425D-96E9-B91C17062CAE": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "tilt.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/tilt.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"33BEFE65-19C3-49BE-BC43-2033F194463C": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ps3eye_capi.cpp",
+			"path": "src/eye/ps3eye_capi.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"3E3D863F-4FB9-4957-A27A-8CE65F3C84CA": {
+			"fileRef": "145B9B43-8C98-48B8-B8EE-F2F7B2499707",
+			"isa": "PBXBuildFile"
+		},
+		"404EF1C0-DE9F-49EC-9B43-1F90C3EEC2AA": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxKinectExtras.h",
+			"path": "../../../addons/ofxKinect/src/extra/ofxKinectExtras.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"46DB3D3F-8183-4F71-B925-35306C8985D7": {
+			"fileRef": "E782E769-B9BE-4FCA-89CA-55C5728C6B1B",
+			"isa": "PBXBuildFile"
+		},
+		"4D8A9267-62A6-4182-9CA2-756BCF1D3C0B": {
+			"children": [
+				"33BEFE65-19C3-49BE-BC43-2033F194463C",
+				"DDA0B148-25C9-44D1-AC13-3F43DB88E039",
+				"FCE38002-8129-4EC1-ABE3-364BF93687F5",
+				"7A421934-4FA9-4423-AB94-C0A0206FDF85"
+			],
+			"isa": "PBXGroup",
+			"name": "eye",
+			"path": "src/eye",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"53DAB2C0-1B0D-440F-96CC-299A30669AEC": {
+			"children": [
+				"27530F81-5C25-45A9-8B23-653160892D1B",
+				"57899810-FAAE-496A-A693-29C53CD4013C"
+			],
+			"isa": "PBXGroup",
+			"name": "libfreenect",
+			"path": "../../../addons/ofxKinect/libs/libfreenect",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"57899810-FAAE-496A-A693-29C53CD4013C": {
+			"children": [
+				"8454DC46-6283-4B8A-A27C-9301DAA740AC",
+				"85761B66-A547-4897-8E85-6DE76E725C58",
+				"E7659712-8E88-493F-B2F3-74532FD58526",
+				"815CFBFE-1DF5-483E-AF9E-67B3CA981925",
+				"145B9B43-8C98-48B8-B8EE-F2F7B2499707",
+				"DC92191B-DAB0-4888-9CEB-1C6C3D5CD37B",
+				"FDBD250F-5943-4558-9468-07D425CE722B",
+				"A4234389-660A-47F0-A210-6A2B091E0900",
+				"D7EBE1BA-B353-457D-9778-D57E92B6C973",
+				"E782E769-B9BE-4FCA-89CA-55C5728C6B1B",
+				"236DDD5B-6540-4309-AC8C-6E6394186AF0",
+				"31AF9952-C9DF-425D-96E9-B91C17062CAE",
+				"C6DDBABA-7014-444D-8488-40C31EC7F860",
+				"C4AB7B36-5767-4F6C-987F-B3523BF9240D"
+			],
+			"isa": "PBXGroup",
+			"name": "src",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"5BB41AC3-059D-452E-AAE1-D38ECE7CEAF4": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxKinectExtras.cpp",
+			"path": "../../../addons/ofxKinect/src/extra/ofxKinectExtras.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"60BD0B6F-D262-4EA8-8BAC-C63518BD26EF": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "libfreenect.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/include/libfreenect.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"657A1C1D-4102-469B-90B6-3D0C1402700B": {
+			"children": [
+				"53DAB2C0-1B0D-440F-96CC-299A30669AEC",
+				"F335EA7B-8185-47CF-A9F6-3A0EFDC01FA6"
+			],
+			"isa": "PBXGroup",
+			"name": "libs",
+			"path": "../../../addons/ofxKinect/libs",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"7A421934-4FA9-4423-AB94-C0A0206FDF85": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ps3eye_capi.h",
+			"path": "src/eye/ps3eye_capi.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"815CFBFE-1DF5-483E-AF9E-67B3CA981925": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "core.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/core.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8454DC46-6283-4B8A-A27C-9301DAA740AC": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "audio.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/audio.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"85761B66-A547-4897-8E85-6DE76E725C58": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "cameras.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/cameras.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"8DC4B7FB-8E5F-4C93-96A1-D378C4A4F667": {
+			"fileRef": "85761B66-A547-4897-8E85-6DE76E725C58",
+			"isa": "PBXBuildFile"
+		},
+		"8F84D30F-BF59-40B0-9341-CAE3646C6977": {
+			"children": [
+				"5BB41AC3-059D-452E-AAE1-D38ECE7CEAF4",
+				"404EF1C0-DE9F-49EC-9B43-1F90C3EEC2AA"
+			],
+			"isa": "PBXGroup",
+			"name": "extra",
+			"path": "../../../addons/ofxKinect/src/extra",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"967C0B28-BCE1-4C02-A714-346F84D68EC6": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxKinect.h",
+			"path": "../../../addons/ofxKinect/src/ofxKinect.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"9BD5E19E-4F4A-46F7-8630-6255F0DE1F89": {
+			"fileRef": "31AF9952-C9DF-425D-96E9-B91C17062CAE",
+			"isa": "PBXBuildFile"
+		},
+		"9E581C82-1DC6-45A5-B278-72D9386EA722": {
+			"children": [
+				"657A1C1D-4102-469B-90B6-3D0C1402700B",
+				"C54A3B36-A724-4B79-A791-AFD9CE2C60CD"
+			],
+			"isa": "PBXGroup",
+			"name": "ofxKinect",
+			"path": "../../../addons/ofxKinect",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A4234389-660A-47F0-A210-6A2B091E0900": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "loader.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/loader.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"A8A20CCD-F92B-4CA8-A63D-3E020CEDA3CB": {
+			"fileRef": "DDA0B148-25C9-44D1-AC13-3F43DB88E039",
+			"isa": "PBXBuildFile"
+		},
+		"AAFECE31-1D1C-429F-A68B-4506F0D2085E": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "libusb.h",
+			"path": "../../../addons/ofxKinect/libs/libusb/include/libusb.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"AB31C53A-08A8-421B-9915-C4D409FFBC7E": {
+			"fileRef": "5BB41AC3-059D-452E-AAE1-D38ECE7CEAF4",
+			"isa": "PBXBuildFile"
+		},
+		"AF9DC420-B558-46DE-9C0C-DCE550AA1830": {
+			"fileRef": "A4234389-660A-47F0-A210-6A2B091E0900",
+			"isa": "PBXBuildFile"
+		},
+		"B6B98970-7AF2-4678-8104-EC60E15A848A": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "libfreenect_audio.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/include/libfreenect_audio.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"BB4B014C10F69532006C3DED": {
+			"children": [
+				"9E581C82-1DC6-45A5-B278-72D9386EA722"
+			],
+			"isa": "PBXGroup",
+			"name": "addons",
+			"path": "../../../addons",
+			"sourceTree": "<group>"
+		},
+		"BF5A77B0-A59F-46DA-B4E3-E1CD53B19385": {
+			"fileRef": "DDB79E28-FF33-4648-94E4-1BCF47097370",
+			"isa": "PBXBuildFile"
+		},
+		"C4AB7B36-5767-4F6C-987F-B3523BF9240D": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "usb_libusb10.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/usb_libusb10.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C54A3B36-A724-4B79-A791-AFD9CE2C60CD": {
+			"children": [
+				"8F84D30F-BF59-40B0-9341-CAE3646C6977",
+				"FCD5699A-402C-4519-A160-3F665C0103A9",
+				"DDB79E28-FF33-4648-94E4-1BCF47097370",
+				"967C0B28-BCE1-4C02-A714-346F84D68EC6"
+			],
+			"isa": "PBXGroup",
+			"name": "src",
+			"path": "../../../addons/ofxKinect/src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"C6DDBABA-7014-444D-8488-40C31EC7F860": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "usb_libusb10.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/usb_libusb10.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"D7EBE1BA-B353-457D-9778-D57E92B6C973": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "loader.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/loader.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DA63A684-20B2-4940-991D-5ED66CD36564": {
+			"fileRef": "C6DDBABA-7014-444D-8488-40C31EC7F860",
+			"isa": "PBXBuildFile"
+		},
+		"DC92191B-DAB0-4888-9CEB-1C6C3D5CD37B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "flags.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/flags.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DDA0B148-25C9-44D1-AC13-3F43DB88E039": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ps3eye.cpp",
+			"path": "src/eye/ps3eye.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"DDB79E28-FF33-4648-94E4-1BCF47097370": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxKinect.cpp",
+			"path": "../../../addons/ofxKinect/src/ofxKinect.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E42962A92163ECCD00A6A9E2": {
+			"alwaysOutOfDate": "1",
+			"buildActionMask": "2147483647",
+			"files": [],
+			"inputPaths": [],
+			"isa": "PBXShellScriptBuildPhase",
+			"name": "Run Script — Compile OF",
+			"outputPaths": [],
+			"runOnlyForDeploymentPostprocessing": "0",
+			"shellPath": "/bin/sh",
+			"shellScript": "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n",
+			"showEnvVarsInLog": "0"
+		},
+		"E4A5B60F29BAAAE400C2D356": {
+			"buildActionMask": "2147483647",
+			"dstPath": "",
+			"dstSubfolderSpec": "6",
+			"files": [],
+			"isa": "PBXCopyFilesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B4A0A3A1720003C02F2": {
+			"children": [
+				"191CD6FA2847E21E0085CBB6",
+				"E4B6FCAD0C3E899E008CF71C",
+				"E4EB6923138AFD0F00A09F29",
+				"E4B69E1C0A3A1BDC003C02F2",
+				"191EF70929D778A400F35F26",
+				"BB4B014C10F69532006C3DED",
+				"E4B69B5B0A3A1756003C02F2"
+			],
+			"isa": "PBXGroup",
+			"sourceTree": "<group>"
+		},
+		"E4B69B4C0A3A1720003C02F2": {
+			"attributes": {
+				"LastUpgradeCheck": "0600"
+			},
+			"buildConfigurationList": "E4B69B4D0A3A1720003C02F2",
+			"compatibilityVersion": "Xcode 3.2",
+			"developmentRegion": "en",
+			"hasScannedForEncodings": "0",
+			"isa": "PBXProject",
+			"knownRegions": [
+				"en",
+				"Base"
+			],
+			"mainGroup": "E4B69B4A0A3A1720003C02F2",
+			"productRefGroup": "E4B69B4A0A3A1720003C02F2",
+			"projectDirPath": "",
+			"projectRoot": "",
+			"targets": [
+				"E4B69B5A0A3A1756003C02F2"
+			]
+		},
+		"E4B69B4D0A3A1720003C02F2": {
+			"buildConfigurations": [
+				"E4B69B4E0A3A1720003C02F2",
+				"E4B69B4F0A3A1720003C02F2"
+			],
+			"defaultConfigurationIsVisible": "0",
+			"defaultConfigurationName": "Release",
+			"isa": "XCConfigurationList"
+		},
+		"E4B69B4E0A3A1720003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"CODE_SIGN_ENTITLEMENTS": "of.entitlements",
+				"COPY_PHASE_STRIP": "NO",
+				"ENABLE_TESTABILITY": "YES",
+				"GCC_OPTIMIZATION_LEVEL": "0",
+				"GCC_WARN_UNUSED_VARIABLE": "NO",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src"
+				],
+				"OTHER_CPLUSPLUSFLAGS": "-D__MACOSX_CORE__"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Debug"
+		},
+		"E4B69B4F0A3A1720003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"CODE_SIGN_ENTITLEMENTS": "of.entitlements",
+				"COPY_PHASE_STRIP": "YES",
+				"GCC_OPTIMIZATION_LEVEL": "3",
+				"GCC_UNROLL_LOOPS": "YES",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src"
+				],
+				"OTHER_CPLUSPLUSFLAGS": "-D__MACOSX_CORE__"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Release"
+		},
+		"E4B69B580A3A1756003C02F2": {
+			"buildActionMask": "2147483647",
+			"files": [
+				"E4B69E200A3A1BDC003C02F2",
+				"E4B69E210A3A1BDC003C02F2",
+				"01E14E3E-0558-4F39-B755-385A44B567B8",
+				"A8A20CCD-F92B-4CA8-A63D-3E020CEDA3CB",
+				"F0D150B6-A1D9-4099-A18F-40FBAC2C914C",
+				"8DC4B7FB-8E5F-4C93-96A1-D378C4A4F667",
+				"F115BDF5-1BA0-4625-865B-79E9089C8D6E",
+				"3E3D863F-4FB9-4957-A27A-8CE65F3C84CA",
+				"AF9DC420-B558-46DE-9C0C-DCE550AA1830",
+				"46DB3D3F-8183-4F71-B925-35306C8985D7",
+				"9BD5E19E-4F4A-46F7-8630-6255F0DE1F89",
+				"DA63A684-20B2-4940-991D-5ED66CD36564",
+				"AB31C53A-08A8-421B-9915-C4D409FFBC7E",
+				"BF5A77B0-A59F-46DA-B4E3-E1CD53B19385"
+			],
+			"isa": "PBXSourcesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B590A3A1756003C02F2": {
+			"buildActionMask": "2147483647",
+			"files": [],
+			"isa": "PBXFrameworksBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4B69B5A0A3A1756003C02F2": {
+			"buildConfigurationList": "E4B69B5F0A3A1757003C02F2",
+			"buildPhases": [
+				"E42962A92163ECCD00A6A9E2",
+				"E4B69B580A3A1756003C02F2",
+				"E4B69B590A3A1756003C02F2",
+				"E4C2427710CC5ABF004149E2",
+				"E4A5B60F29BAAAE400C2D356",
+				"19B789C429E5AB4A0082E9B8"
+			],
+			"buildRules": [],
+			"dependencies": [],
+			"isa": "PBXNativeTarget",
+			"name": "PS3",
+			"productName": "myOFApp",
+			"productReference": "E4B69B5B0A3A1756003C02F2",
+			"productType": "com.apple.product-type.application"
+		},
+		"E4B69B5B0A3A1756003C02F2": {
+			"explicitFileType": "wrapper.application",
+			"includeInIndex": "0",
+			"isa": "PBXFileReference",
+			"path": "PS3Debug.app",
+			"sourceTree": "BUILT_PRODUCTS_DIR"
+		},
+		"E4B69B5F0A3A1757003C02F2": {
+			"buildConfigurations": [
+				"E4B69B600A3A1757003C02F2",
+				"E4B69B610A3A1757003C02F2"
+			],
+			"defaultConfigurationIsVisible": "0",
+			"defaultConfigurationName": "Release",
+			"isa": "XCConfigurationList"
+		},
+		"E4B69B600A3A1757003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"ARCHS": "$(ARCHS_STANDARD)",
+				"COPY_PHASE_STRIP": "NO",
+				"FRAMEWORK_SEARCH_PATHS": "$(inherited)",
+				"GCC_DYNAMIC_NO_PIC": "NO",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src",
+					"src",
+					"eye",
+					"../../../addons/ofxKinect/libs",
+					"../../../addons/ofxKinect/libs/libfreenect",
+					"../../../addons/ofxKinect/libs/libfreenect/include",
+					"../../../addons/ofxKinect/libs/libfreenect/platform",
+					"../../../addons/ofxKinect/libs/libfreenect/src",
+					"../../../addons/ofxKinect/libs/libusb",
+					"../../../addons/ofxKinect/libs/libusb/include",
+					"../../../addons/ofxKinect/libs/libusb/lib",
+					"../../../addons/ofxKinect/libs/libusb/lib/osx",
+					"../../../addons/ofxKinect/src",
+					"../../../addons/ofxKinect/src/extra"
+				],
+				"LIBRARY_SEARCH_PATHS": "$(inherited)",
+				"OTHER_LDFLAGS": [
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+					"../../../addons/ofxKinect/libs/libusb/lib/osx/usb-1.0.0.a"
+				]
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Debug"
+		},
+		"E4B69B610A3A1757003C02F2": {
+			"baseConfigurationReference": "E4EB6923138AFD0F00A09F29",
+			"buildSettings": {
+				"ARCHS": "$(ARCHS_STANDARD)",
+				"COPY_PHASE_STRIP": "YES",
+				"FRAMEWORK_SEARCH_PATHS": "$(inherited)",
+				"HEADER_SEARCH_PATHS": [
+					"$(OF_CORE_HEADERS)",
+					"src",
+					"src",
+					"eye",
+					"../../../addons/ofxKinect/libs",
+					"../../../addons/ofxKinect/libs/libfreenect",
+					"../../../addons/ofxKinect/libs/libfreenect/include",
+					"../../../addons/ofxKinect/libs/libfreenect/platform",
+					"../../../addons/ofxKinect/libs/libfreenect/src",
+					"../../../addons/ofxKinect/libs/libusb",
+					"../../../addons/ofxKinect/libs/libusb/include",
+					"../../../addons/ofxKinect/libs/libusb/lib",
+					"../../../addons/ofxKinect/libs/libusb/lib/osx",
+					"../../../addons/ofxKinect/src",
+					"../../../addons/ofxKinect/src/extra"
+				],
+				"LIBRARY_SEARCH_PATHS": "$(inherited)",
+				"OTHER_LDFLAGS": [
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+					"../../../addons/ofxKinect/libs/libusb/lib/osx/usb-1.0.0.a"
+				],
+				"baseConfigurationReference": "E4EB6923138AFD0F00A09F29"
+			},
+			"isa": "XCBuildConfiguration",
+			"name": "Release"
+		},
+		"E4B69E1C0A3A1BDC003C02F2": {
+			"children": [
+				"E4B69E1D0A3A1BDC003C02F2",
+				"E4B69E1E0A3A1BDC003C02F2",
+				"E4B69E1F0A3A1BDC003C02F2",
+				"2A8C2FC8-90B8-4D44-8B8F-847B759378CA",
+				"4D8A9267-62A6-4182-9CA2-756BCF1D3C0B"
+			],
+			"isa": "PBXGroup",
+			"path": "src",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1D0A3A1BDC003C02F2": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "sourcecode.cpp.cpp",
+			"name": "main.cpp",
+			"path": "src/main.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1E0A3A1BDC003C02F2": {
+			"explicitFileType": "sourcecode.cpp.cpp",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofApp.cpp",
+			"path": "src/ofApp.cpp",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E1F0A3A1BDC003C02F2": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "sourcecode.c.h",
+			"name": "ofApp.h",
+			"path": "src/ofApp.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E4B69E200A3A1BDC003C02F2": {
+			"fileRef": "E4B69E1D0A3A1BDC003C02F2",
+			"isa": "PBXBuildFile"
+		},
+		"E4B69E210A3A1BDC003C02F2": {
+			"fileRef": "E4B69E1E0A3A1BDC003C02F2",
+			"isa": "PBXBuildFile"
+		},
+		"E4B6FCAD0C3E899E008CF71C": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.plist.xml",
+			"path": "openFrameworks-Info.plist",
+			"sourceTree": "<group>"
+		},
+		"E4C2427710CC5ABF004149E2": {
+			"buildActionMask": "2147483647",
+			"dstPath": "",
+			"dstSubfolderSpec": "10",
+			"files": [],
+			"isa": "PBXCopyFilesBuildPhase",
+			"runOnlyForDeploymentPostprocessing": "0"
+		},
+		"E4EB6923138AFD0F00A09F29": {
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"lastKnownFileType": "text.xcconfig",
+			"path": "Project.xcconfig",
+			"sourceTree": "<group>"
+		},
+		"E7659712-8E88-493F-B2F3-74532FD58526": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "cameras.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/cameras.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"E782E769-B9BE-4FCA-89CA-55C5728C6B1B": {
+			"explicitFileType": "sourcecode.c.c",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "registration.c",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/registration.c",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F0D150B6-A1D9-4099-A18F-40FBAC2C914C": {
+			"fileRef": "8454DC46-6283-4B8A-A27C-9301DAA740AC",
+			"isa": "PBXBuildFile"
+		},
+		"F115BDF5-1BA0-4625-865B-79E9089C8D6E": {
+			"fileRef": "815CFBFE-1DF5-483E-AF9E-67B3CA981925",
+			"isa": "PBXBuildFile"
+		},
+		"F335EA7B-8185-47CF-A9F6-3A0EFDC01FA6": {
+			"children": [
+				"F98A7E2B-AADE-475B-9B30-4F55E1844433"
+			],
+			"isa": "PBXGroup",
+			"name": "libusb",
+			"path": "../../../addons/ofxKinect/libs/libusb",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"F98A7E2B-AADE-475B-9B30-4F55E1844433": {
+			"children": [
+				"AAFECE31-1D1C-429F-A68B-4506F0D2085E"
+			],
+			"isa": "PBXGroup",
+			"name": "include",
+			"path": "../../../addons/ofxKinect/libs/libusb/include",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FCD5699A-402C-4519-A160-3F665C0103A9": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ofxBase3DVideo.h",
+			"path": "../../../addons/ofxKinect/src/ofxBase3DVideo.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FCE38002-8129-4EC1-ABE3-364BF93687F5": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "ps3eye.h",
+			"path": "src/eye/ps3eye.h",
+			"sourceTree": "SOURCE_ROOT"
+		},
+		"FDBD250F-5943-4558-9468-07D425CE722B": {
+			"explicitFileType": "sourcecode.c.h",
+			"fileEncoding": "4",
+			"isa": "PBXFileReference",
+			"name": "freenect_internal.h",
+			"path": "../../../addons/ofxKinect/libs/libfreenect/src/freenect_internal.h",
+			"sourceTree": "SOURCE_ROOT"
+		}
+	},
+	"rootObject": "E4B69B4C0A3A1720003C02F2"
+}

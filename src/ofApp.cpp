@@ -3,6 +3,8 @@
 using namespace ps3eye;
 
 void ofApp::setup(){
+	
+	
 	ofSetFrameRate(0);
 	ofSetVerticalSync(false);
 	pixels.allocate(camDimensions.x, camDimensions.y, OF_IMAGE_COLOR);

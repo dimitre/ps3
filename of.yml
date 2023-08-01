@@ -5,4 +5,6 @@ ofpath: ../../..
 addons:
 - ofxKinect
 # platforms: ["osx", "msys2", "vs"]
+platforms: ["vs"]
+
 # templates: ["vscode"]

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\eye\ps3eye.cpp">
+			<Filter>src\eye</Filter>
+		</ClCompile>
+		<ClCompile Include="src\eye\ps3eye_capi.cpp">
+			<Filter>src\eye</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\src\ofxKinect.cpp">
+			<Filter>addons\ofxKinect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\src\extra\ofxKinectExtras.cpp">
+			<Filter>addons\ofxKinect\src\extra</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\loader.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\usb_libusb10.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\cameras.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\core.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\flags.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\tilt.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\registration.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\audio.c">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\eye">
+			<UniqueIdentifier>{F951CFB9--F1B-7-4B-A7-9-10C-E439F28BB517}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{A72C28FE--ABE-A-46-15-8-276-615AFA8F9792}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect">
+			<UniqueIdentifier>{DE07A5DE--883-4-4E-01-8-819-0298A66460C1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\src">
+			<UniqueIdentifier>{5A50D79B--248-1-44-06-9-FCB-DEA7AC1554F3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\src\extra">
+			<UniqueIdentifier>{F29952C4--DB0-0-4C-EE-B-331-C86639EDF0A8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs">
+			<UniqueIdentifier>{50FEFB78--BF0-5-4F-A8-A-5B4-1924E7828AC7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libusb">
+			<UniqueIdentifier>{98DF6A6B--778-0-47-B6-B-8FF-82B2973F9653}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libusb\include">
+			<UniqueIdentifier>{4F7923B4--D1F-5-40-9D-9-075-20AE6E678EB8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libfreenect">
+			<UniqueIdentifier>{7FCEE095--1F8-4-4C-D4-8-3DA-61DB59C3FB16}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libfreenect\include">
+			<UniqueIdentifier>{8CCA6103--F2C-7-4E-5A-9-DEF-FD5327B72612}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libfreenect\platform">
+			<UniqueIdentifier>{EC7E8226--DAC-6-4C-81-9-707-7CBC72332E46}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libfreenect\platform\windows">
+			<UniqueIdentifier>{507E2034--FE8-8-4E-F3-B-61C-A801B8718E8E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxKinect\libs\libfreenect\src">
+			<UniqueIdentifier>{77F1BA04--8B6-0-48-AC-8-D45-D377E535F450}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\eye\ps3eye.h">
+			<Filter>src\eye</Filter>
+		</ClInclude>
+		<ClInclude Include="src\eye\ps3eye_capi.h">
+			<Filter>src\eye</Filter>
+		</ClInclude>
+		<ClInclude Include="src\eyecam.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\src\ofxKinect.h">
+			<Filter>addons\ofxKinect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\src\ofxBase3DVideo.h">
+			<Filter>addons\ofxKinect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\src\extra\ofxKinectExtras.h">
+			<Filter>addons\ofxKinect\src\extra</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libusb\include\libusb.h">
+			<Filter>addons\ofxKinect\libs\libusb\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\include\libfreenect.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\include\libfreenect_registration.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\include\libfreenect_audio.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\platform\windows\unistd.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\platform\windows</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\registration.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\flags.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\usb_libusb10.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\loader.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\freenect_internal.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxKinect\libs\libfreenect\src\cameras.h">
+			<Filter>addons\ofxKinect\libs\libfreenect\src</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>
